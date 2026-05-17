@@ -10,115 +10,116 @@
   
   <!-- Локальные стили только для этой страницы -->
   <style>
+  /* ==================== HERO ==================== */
+  .service-hero {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
+                url('../assets/services/6.jpg') center/cover no-repeat !important;
+    color: white;
+    padding: 180px 0 120px;
+    text-align: center;
+    position: relative;
+  }
+  .service-hero h1 {
+    font-size: 3.4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    font-weight: 800;
+  }
+  .badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 35px 0;
+  }
+  .badge {
+    background: rgba(34, 197, 94, 0.18);
+    border: 1px solid var(--neon-green);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    backdrop-filter: blur(8px);
+  }
+
+  /* ==================== ПАКЕТЫ ==================== */
+  .package-card {
+    border: 2px solid transparent;
+    transition: all 0.4s;
+  }
+  .package-card.popular {
+    border-color: var(--neon-green);
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(34, 197, 94, 0.25);
+  }
+  .package-card:hover {
+    transform: translateY(-10px);
+  }
+
+  /* ==================== ОСТАЛЬНЫЕ СТИЛИ (твои) ==================== */
   .service-detail { 
     padding: 130px 0 70px !important; 
     background: var(--bg-light) !important; 
   }
   
   .detail-grid {
-  display: grid !important;
-  grid-template-columns: 2fr 1fr !important; /* 2/3 видео, 1/3 инфо */
-  gap: 40px !important;
-  align-items: center !important; /* Центрируем колонки по вертикали */
-}
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
 
-  
-  /* Левая колонка с видео */
-.detail-grid > div:first-child {
-  display: flex !important;
-  justify-content: center !important; /* Центрируем видео по горизонтали */
-  align-items: center !important;     /* Центрируем видео по вертикали */
-}
+  .detail-video-wrap {
+    width: 100% !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-light) !important;
+  }
 
-/* Обёртка видео */
-.detail-video-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  border-radius: 20px !important;
-  overflow: hidden !important;
-  box-shadow: var(--shadow-light) !important;
-}
+  .detail-video {
+    width: 100% !important;
+    aspect-ratio: 16/9 !important;
+    object-fit: cover !important;
+  }
 
-/* Само видео */
-.detail-video {
-  width: 100% !important;
-  display: block !important;
-  aspect-ratio: 16/9 !important;
-  object-fit: cover !important;
-}
+  .detail-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+  }
 
-/* Правая колонка с инфо */
-.detail-info {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important; /* Горизонтальное центрирование всех дочерних элементов */
-  text-align: center !important;
-  gap: 18px !important;
-  width: 100% !important;
-}
-
-.detail-info h1 {
-  margin-top: 0 !important;
-  padding-top: 10px !important;
-}
-
-  
   .detail-info .subtitle { 
     color: var(--neon-green) !important; 
     font-weight: 700 !important; 
     font-size: 0.95rem !important; 
     text-transform: uppercase !important; 
     letter-spacing: 1px !important; 
-    margin: 0 0 24px !important; 
-    width: 100% !important;
   }
-  
-  /* Инфо-блоки */
+
   .info-block {
     width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    text-align: left !important;
     padding: 24px !important;
-}
+  }
   .info-block:hover { transform: translateY(-3px) !important; }
-  
- .info-block h3 {
-  display: flex !important;
-  justify-content: center !important; /* Центрируем иконку + текст заголовка */
-  align-items: center !important;
-  text-align: center !important;
-  width: 100% !important;
-  margin: 0 0 8px !important;
-  gap: 8px !important;
-}
-  
-  .info-block p {
-    text-align: justify !important; /* Растягивает текст от края до края */
-    text-align-last: left !important; /* Последняя строка по левому краю */
-    line-height: 1.5 !important;
-}
-  
-  /* Адаптив */
+
   @media (max-width: 900px) {
     .detail-grid {
-        grid-template-columns: 1fr !important; /* В одну колонку */
-        gap: 30px !important;
+      grid-template-columns: 1fr !important;
+      gap: 30px !important;
     }
     .detail-info {
-        order: -1; /* Инфо наверх, видео вниз */
+      order: -1;
     }
-    .detail-video-wrap {
-        width: 100% !important;
-    }
-}
+  }
 </style>
 </head>
 <body>
 
   <!-- 🔝 ШАПКА (ПУТИ СКОРРЕКТИРОВАНЫ ДЛЯ PAGES/) -->
   <header>
+    
     <div class="container">
       <nav>
         <div class="logo-wrapper">
@@ -143,15 +144,63 @@
   </header>
 
   <main>
+    <!-- HERO - КРАСИВЫЙ БЛОК -->
+<section class="service-hero">
+  <div class="container">
+    <h1>Анализ воды</h1>
+    <p class="subtitle" style="font-size:1.4rem; max-width:900px; margin:0 auto 30px;">
+      Питьевая • Природная • Сточная • Техническая
+    </p>
+    <div class="badges">
+      <div class="badge">✅ Аккредитованная лаборатория</div>
+      <div class="badge">⏱ Результат от 3 дней</div>
+      <div class="badge">📄 Официальные протоколы</div>
+    </div>
+    <a href="#contacts" class="btn-primary" style="font-size:1.3rem; padding:20px 50px;">Заказать анализ воды</a>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ ВЫБИРАЮТ НАС -->
+<section style="padding:80px 0; background:var(--bg-light);">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:50px;">Почему выбирают нас</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px;">
+      
+      <div class="glass" style="padding:35px; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:15px;">🔬</div>
+        <h3>Аккредитованная лаборатория</h3>
+        <p>Входим в реестр Росаккредитации. Все протоколы имеют юридическую силу.</p>
+      </div>
+
+      <div class="glass" style="padding:35px; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:15px;">🚗</div>
+        <h3>Выезд специалиста</h3>
+        <p>Профессиональный отбор проб с актом и соблюдением всех норм.</p>
+      </div>
+
+      <div class="glass" style="padding:35px; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:15px;">📋</div>
+        <h3>Полное сопровождение</h3>
+        <p>От консультации до сдачи документов в надзорные органы.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
     <!-- 📊 ДЕТАЛЬНАЯ ИНФОРМАЦИЯ ОБ УСЛУГЕ -->
     <section class="service-detail">
       <div class="container">
         <div class="detail-grid">
           <!-- СЛЕВА: Видео -->
           <div class="detail-video-wrap">
-            <video autoplay muted loop playsinline class="detail-video" poster="../assets/services/water-poster.jpg">
-              <source src="../assets/pages/Water.mp4" type="video/mp4">
+            <!--<video autoplay muted loop playsinline class="detail-video" poster="../assets/services/water-poster.jpg">
+              <img src="../assets/pages/temp.png">
             </video>
+            -->
+            <img src="../assets/pages/temp.png" 
+              alt="Анализ воды" 
+              style="width:100%; height:auto; display:block;">
           </div>
 
           <!-- СПРАВА: Инфо-блоки -->
@@ -182,6 +231,242 @@
         </div>
       </div>
     </section>
+
+    <!-- ПАКЕТЫ АНАЛИЗОВ - КРАСИВЫЙ БЛОК -->
+<section style="padding:80px 0; background:var(--bg-light);">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:50px;">Пакеты анализов</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:25px;">
+      
+      <!-- Базовый -->
+      <div class="glass package-card" style="padding:30px; border-radius:20px;">
+        <h3>Базовый</h3>
+        <p style="font-size:2.5rem; font-weight:800; color:var(--neon-green); margin:15px 0;">от 4 900 ₽</p>
+        <ul style="margin:20px 0; line-height:1.8;">
+          <li>● 12 основных показателей</li>
+          <li>● pH, жёсткость, железо и др.</li>
+          <li>● Протокол испытаний</li>
+        </ul>
+        <a href="#contacts" class="btn-detail">Заказать</a>
+      </div>
+
+      <!-- Стандарт (Самый популярный) -->
+      <div class="glass package-card popular" style="padding:30px; border-radius:20px; position:relative;">
+        <div style="position:absolute; top:-12px; right:20px; background:var(--neon-green); color:#000; padding:5px 15px; border-radius:20px; font-weight:800; font-size:0.9rem;">Самый популярный</div>
+        <h3>Стандарт (Рекомендуем)</h3>
+        <p style="font-size:2.5rem; font-weight:800; color:var(--neon-green); margin:15px 0;">от 9 500 ₽</p>
+        <ul style="margin:20px 0; line-height:1.8;">
+          <li>● 25+ показателей</li>
+          <li>● Химия + микробиология</li>
+          <li>● Тяжёлые металлы</li>
+        </ul>
+        <a href="#contacts" class="btn-detail">Заказать</a>
+      </div>
+
+      <!-- Расширенный -->
+      <div class="glass package-card" style="padding:30px; border-radius:20px;">
+        <h3>Расширенный</h3>
+        <p style="font-size:2.5rem; font-weight:800; color:var(--neon-green); margin:15px 0;">от 15 000 ₽</p>
+        <ul style="margin:20px 0; line-height:1.8;">
+          <li>● Полный химический + микробиологический</li>
+          <li>● Нефтепродукты, пестициды</li>
+          <li>● Радон (по запросу)</li>
+        </ul>
+        <a href="#contacts" class="btn-detail">Заказать</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ДЕТАЛЬНАЯ ТАБЛИЦА ПОКАЗАТЕЛЕЙ -->
+<section style="padding:80px 0;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:50px;">Анализируемые показатели воды</h2>
+    <table style="width:100%; border-collapse:collapse; background:white; box-shadow:var(--shadow-light);">
+      <thead>
+        <tr style="background:#f1f5f9;">
+          <th style="padding:18px; text-align:left;">Группа</th>
+          <th style="padding:18px; text-align:left;">Ключевые показатели</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:16px; border-bottom:1px solid #eee;"><strong>Органолептика</strong></td><td style="padding:16px; border-bottom:1px solid #eee;">Запах, вкус, цветность, мутность</td></tr>
+        <tr><td style="padding:16px; border-bottom:1px solid #eee;"><strong>Общие свойства</strong></td><td style="padding:16px; border-bottom:1px solid #eee;">pH, жёсткость общая, щелочность, минерализация</td></tr>
+        <tr><td style="padding:16px; border-bottom:1px solid #eee;"><strong>Неорганические вещества</strong></td><td style="padding:16px; border-bottom:1px solid #eee;">Железо, марганец, нитраты, нитриты, аммоний, фториды</td></tr>
+        <tr><td style="padding:16px; border-bottom:1px solid #eee;"><strong>Тяжёлые металлы</strong></td><td style="padding:16px; border-bottom:1px solid #eee;">Свинец, кадмий, ртуть, мышьяк, медь, цинк, алюминий</td></tr>
+        <tr><td style="padding:16px; border-bottom:1px solid #eee;"><strong>Микробиология</strong></td><td style="padding:16px; border-bottom:1px solid #eee;">ОМЧ, колиформные бактерии, E.coli, энтерококки</td></tr>
+        <tr><td style="padding:16px;"><strong>Органические загрязнители</strong></td><td style="padding:16px;">Нефтепродукты, ПАВ, фенолы, пестициды</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- СИЛЬНЫЙ CTA -->
+<section style="padding:60px 0; background:linear-gradient(135deg, #1a5c37, #22c55e); color:white; text-align:center;">
+  <div class="container">
+    <h2 style="color:white; margin-bottom:20px;">Готовы заказать анализ воды?</h2>
+    <p style="font-size:1.25rem; max-width:700px; margin:0 auto 30px;">
+      Оставьте заявку прямо сейчас — специалист свяжется с вами в течение 30 минут
+    </p>
+    <a href="#contacts" class="btn-primary" style="font-size:1.4rem; padding:20px 60px; background:white; color:#1a5c37;">
+      Оставить заявку
+    </a>
+  </div>
+</section>
+
+
+
+<!-- FAQ - ВОПРОС-ОТВЕТ -->
+<section style="padding:80px 0; background:var(--bg-light);">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:50px;">Часто задаваемые вопросы</h2>
+    
+    <div class="faq-container" style="max-width:900px; margin:0 auto;">
+      
+      <div class="faq-item glass" style="margin-bottom:15px; border-radius:16px; overflow:hidden;">
+        <div class="faq-question" style="padding:20px 25px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+          Сколько стоит анализ воды из скважины?
+          <span style="font-size:1.4rem;">↓</span>
+        </div>
+        <div class="faq-answer" style="padding:0 25px 25px; display:none;">
+          Базовый пакет — от 4 900 ₽<br>
+          Рекомендуемый (Стандарт) — от 9 500 ₽
+        </div>
+      </div>
+
+      <div class="faq-item glass" style="margin-bottom:15px; border-radius:16px; overflow:hidden;">
+        <div class="faq-question" style="padding:20px 25px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+          Нужен ли выезд специалиста для отбора проб?
+          <span style="font-size:1.4rem;">↓</span>
+        </div>
+        <div class="faq-answer" style="padding:0 25px 25px; display:none;">
+          Да, рекомендуется. Наш специалист проведёт отбор проб по всем правилам с оформлением акта.
+        </div>
+      </div>
+
+      <div class="faq-item glass" style="margin-bottom:15px; border-radius:16px; overflow:hidden;">
+        <div class="faq-question" style="padding:20px 25px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+          Действителен ли ваш протокол для Роспотребнадзора?
+          <span style="font-size:1.4rem;">↓</span>
+        </div>
+        <div class="faq-answer" style="padding:0 25px 25px; display:none;">
+          Да. Лаборатория аккредитована Росаккредитацией, протоколы имеют полную юридическую силу.
+        </div>
+      </div>
+
+      <div class="faq-item glass" style="margin-bottom:15px; border-radius:16px; overflow:hidden;">
+        <div class="faq-question" style="padding:20px 25px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between; align-items:center;">
+          Как быстро вы сделаете анализ?
+          <span style="font-size:1.4rem;">↓</span>
+        </div>
+        <div class="faq-answer" style="padding:0 25px 25px; display:none;">
+          Базовый анализ — 3–5 рабочих дней.<br>
+          Срочный анализ — от 1 дня (с доплатой).
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ КЛИЕНТОВ - 6 ОТЗЫВОВ -->
+<section style="padding:80px 0; background:#f8fafc;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:50px;">Что говорят клиенты</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:25px;">
+      
+      <div class="glass" style="padding:30px;">
+        <p style="font-style:italic;">«Анализ воды из скважины сделали за 4 дня. Всё понятно, протокол приняли без вопросов.»</p>
+        <strong style="display:block; margin-top:20px;">— Сергей Петров, СНТ «Родник»</strong>
+      </div>
+
+      <div class="glass" style="padding:30px;">
+        <p style="font-style:italic;">«Работаем с ними уже третий год. Качество на высшем уровне.»</p>
+        <strong style="display:block; margin-top:20px;">— ООО «ПромЭко»</strong>
+      </div>
+
+      <div class="glass" style="padding:30px;">
+        <p style="font-style:italic;">«Срочно нужен был анализ для нового объекта. Сделали быстро и качественно. Рекомендую.»</p>
+        <strong style="display:block; margin-top:20px;">— Ильдар Хайруллин, ООО «ТехноСтрой»</strong>
+      </div>
+
+      <div class="glass" style="padding:30px;">
+        <p style="font-style:italic;">«Отличный сервис. Анализ колодезной воды, всё по СанПиН, протокол приняли сразу.»</p>
+        <strong style="display:block; margin-top:20px;">— Анна Смирнова, частный клиент</strong>
+      </div>
+
+      <div class="glass" style="padding:30px;">
+        <p style="font-style:italic;">«Делали анализ сточных вод. Всё в срок, специалисты вежливые и компетентные.»</p>
+        <strong style="display:block; margin-top:20px;">— ООО «Камский Бетон»</strong>
+      </div>
+
+      <div class="glass" style="padding:30px;">
+        <p style="font-style:italic;">«Заказывали расширенный анализ перед покупкой дома. Нашли проблемы с железом, спасибо за подробные рекомендации.»</p>
+        <strong style="display:block; margin-top:20px;">— Ринат Фахрутдинов</strong>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ТОП БЛОК ДОВЕРИЯ -->
+<section style="padding:70px 0; background:#f8fafc;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:40px;">Нам доверяют</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; opacity:0.85;">
+      <img src="../assets/logo_partners_photo/rosneft-logo-eng.png" alt="Роснефть" style="height:45px;">
+      <img src="../assets/logo_partners_photo/gazprom-logo-eng.png" alt="Газпром" style="height:45px;">
+      <img src="../assets/logo_partners_photo/kamaz-logo.png" alt="КАМАЗ" style="height:45px;">
+      <img src="../assets/logo_partners_photo/lukoil-logo-eng.png" alt="Лукойл" style="height:45px;">
+      <img src="../assets/logo_partners_photo/rzd-logo.png" alt="РЖД" style="height:45px;">
+      <img src="assets/logo_partners_photo/6.png" alt="Партнер 6" class="partner-logo">
+        <img src="assets/logo_partners_photo/7.png" alt="Партнер 7" class="partner-logo">
+        <img src="assets/logo_partners_photo/8.jpg" alt="Партнер 8" class="partner-logo">
+        <img src="assets/logo_partners_photo/9.webp" alt="Партнер 9" class="partner-logo">
+        <img src="assets/logo_partners_photo/lukoil-logo-eng.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/gazprom-logo-eng.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/bashneft-vertical-logo.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/rosneft-logo-eng.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/rosla_logo.png" alt="Партнер 1" class="partner-logo">
+        <img src="assets/logo_partners_photo/2.png" alt="Партнер 2" class="partner-logo">
+        <img src="assets/logo_partners_photo/kamaz-logo.png" alt="Партнер 3" class="partner-logo">
+        
+    </div>
+   
+  </div>
+</section>
+
+<!-- СЧЁТЧИКИ - ЦИФРЫ И ФАКТЫ -->
+<section style="padding:80px 0; background: linear-gradient(135deg, #1a5c37, #22c55e); color: white;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:60px; color:white;">Нам доверяют тысячи клиентов</h2>
+    
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:40px; text-align:center;">
+      
+      <div data-aos="fade-up">
+        <h3 style="font-size:3.2rem; font-weight:800; margin:0;" id="count1">0</h3>
+        <p style="font-size:1.1rem; margin-top:8px; opacity:0.9;">Анализов проведено</p>
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 style="font-size:3.2rem; font-weight:800; margin:0;" id="count2">0</h3>
+        <p style="font-size:1.1rem; margin-top:8px; opacity:0.9;">Постоянных клиентов</p>
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 style="font-size:3.2rem; font-weight:800; margin:0;" id="count3">98</h3>
+        <p style="font-size:1.1rem; margin-top:8px; opacity:0.9;">% повторных заказов</p>
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 style="font-size:3.2rem; font-weight:800; margin:0;" id="count4">6</h3>
+        <p style="font-size:1.1rem; margin-top:8px; opacity:0.9;">лет на рынке</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <section id="contacts" class="callback-section">
     <div class="callback-container">
@@ -217,8 +502,6 @@
     </form>
   </div>
 </div>
-          
-        
       </div>
     </div>
   </section>
@@ -273,6 +556,59 @@
         finally { setTimeout(() => { if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; } }, 3000); }
       });
     });
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      
+      // Поворот стрелки (по желанию)
+      const arrow = question.querySelector('span');
+      if (arrow) arrow.style.transform = answer.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
+  });
   </script>
+
+
+<script>
+// Анимация счётчиков
+function animateCounter(id, start, end, duration, suffix = '') {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const value = Math.floor(progress * (end - start) + start);
+    document.getElementById(id).textContent = value + suffix;
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    } else {
+      document.getElementById(id).textContent = end + suffix;
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+// Запуск анимации при скролле
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter('count1', 0, 850, 2000, '+');
+      animateCounter('count2', 0, 320, 2000, '+');
+      animateCounter('count3', 0, 98, 1500, '%');
+      animateCounter('count4', 0, 6, 1500, '');
+      observer.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector('#count1').parentElement.parentElement);
+</script>
+  <!-- Плавающая кнопка WhatsApp -->
+<a href="https://wa.me/79370408804" target="_blank" 
+   style="position:fixed; bottom:30px; right:30px; width:65px; height:65px; background:#25D366; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; box-shadow:0 5px 20px rgba(37,211,102,0.4); z-index:9999; text-decoration:none;">
+  💬
+</a>
+
+
 </body>
 </html>
