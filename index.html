@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ГК Лабораторные услуги | Анализ воды, почвы, воздуха</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="video-background">
+    <video id="bg-video" muted playsinline autoplay loop src="assets/1477432_People_Science_1280x720.mp4" poster="bg-fallback.jpg"></video>
+    <div id="particles-js"></div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo-wrapper">
+          <img src="assets/logo.png" alt="Логотип" class="header-logo">
+          <div class="logo-text">
+            Группа компаний<br>
+            <span>ЛАБОРАТОРНЫЕ УСЛУГИ</span>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#main">Главная</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#steps">Процесс</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <div class="header-contacts">
+          <a href="https://t.me/instinkt22" class="contact-icon" target="_blank" rel="noopener">
+          <img src="assets/shapha_icons/tg.png" alt="TG"></a>
+          <a href="tel:+79370408804" class="contact-icon"><img src="assets/shapha_icons/call.png" alt="Tel"></a>
+          <a href="mailto:raltera@yandex.ru" class="contact-icon"><img src="assets/shapha_icons/message.png" alt="Mail"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="main" class="hero">
+    <div class="container">
+      <h1 class="main-title">ГК Лабораторные услуги</h1>
+      <p class="hero-description">Твой надёжный партнёр в области экологии. Мы организуем выполнение лабораторных работ любой сложности.</p>
+      <a href="#contacts" class="btn-primary">Заказать анализ</a>
+      
+      <div class="features-grid-top">
+        <div class="feature-item glass"><div class="feature-icon">⏱️</div><div class="feature-text"><strong>Результат</strong><span>от 3-х до 14 дней</span></div></div>
+        <div class="feature-item glass"><div class="feature-icon">✅</div><div class="feature-text"><strong>Качество</strong><span>Оперативность и точность</span></div></div>
+        <div class="feature-item glass"><div class="feature-icon">📅</div><div class="feature-text"><strong>Сроки</strong><span>Соблюдение сроков указанных в договоре
+</span></div></div>
+        <div class="feature-item glass"><div class="feature-icon">🤝</div><div class="feature-text"><strong>Подход</strong><span>Учитываем нюансы</span></div></div>
+      </div>
+    </div>
+  </section>
+
+ <section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Наши <span class="neon-text">Услуги</span></h2>
+    <div class="services-grid">
+      
+      <!-- 💧 Анализ воды -->
+      <div class="service-card glass">
+        <div class="card-content">
+          <div class="card-icon"></div>
+          <h3>Анализ воды</h3>
+          <p>Химический анализ воды:</p>
+          <ul>
+            <li>ПИТЬЕВОЙ</li>
+            <li>ПРИРОДНОЙ</li>
+            <li>СТОЧНОЙ</li>
+          </ul>
+          <a href="pages/service-water.html" class="btn-detail">Подробнее</a>
+        </div>
+        <!-- Картинка: темная текстура воды -->
+        <div class="service-bg" style="background-image: url('assets/services/6.jpg');"></div>
+      </div>
+
+      <!-- 🌱 Анализ почв -->
+      <div class="service-card glass">
+        <div class="card-content">
+          <div class="card-icon"></div>
+          <h3>Анализ почв</h3>
+          <ul>
+            <li>ХИМИЧЕСКИЙ АНАЛИЗ</li>
+            <li>РАДИОЛОГИЧЕСКИЕ ИССЛЕДОВАНИЯ</li>
+            <li>МИКРОБИОЛОГИЧЕСКИЙ АНАЛИЗ</li>
+          </ul>
+          <a href="pages/service-soils.html" class="btn-detail">Подробнее</a>
+        </div>
+        <!-- Картинка: текстура грунта -->
+        <div class="service-bg" style="background-image: url('assets/services/4.png');"></div>
+      </div>
+
+      <!-- 💨 Анализ воздуха (Отходы) -->
+      <div class="service-card glass">
+        <div class="card-content">
+          <div class="card-icon"></div>
+          <h3>Анализ отходов</h3>
+          <ul>
+            <li>КЛАСС ОПАСНОСТИ</li>
+            <li>БИОТЕСТИРОВАНИЕ</li>
+            <li>КОМПОНЕНТНЫЙ СОСТАВ</li>
+          </ul>
+          <a href="pages/service-waste.html" class="btn-detail">Подробнее</a>
+        </div>
+        <!-- Картинка: небо/экология -->
+        <div class="service-bg" style="background-image: url('assets/services/0.jpg');"></div>
+      </div>
+
+      <!-- ☢️ Радиационный контроль -->
+      <div class="service-card glass">
+        <div class="card-content">
+          <div class="card-icon"></div>
+          <h3>Радиационный контроль</h3>
+          <ul>
+            <li>ОПРЕДЕЛЕНИЕ РАДОНА В ВОДЕ</li>
+            <li>ИЗМЕРЕНИЕ МОЩНОСТИ ДОЗЫ ГАММА-ИЗЛУЧЕНИЯ</li>
+            <li>ИЗМЕРЕНИЕ ПЛОТНОСТИ ПОТОКА РАДОНА</li>
+            <li>ИЗМЕРЕНИЕ ЭРОА</li>
+            <li>ОПРЕДЕЛЕНИЕ СОДЕРЖАНИЯ РАДИОНУКЛИДОВ В ПОЧВЕ</li>
+          </ul>
+          <a href="pages/service-adiation-monitoring.html" class="btn-detail">Подробнее</a>
+        </div>
+        <div class="service-bg" style="background-image: url('assets/services/2.jpg');"></div>
+      </div>
+
+      <!-- 🔊 Шум и вибрация -->
+      <div class="service-card glass">
+        <div class="card-content">
+          <div class="card-icon"></div>
+          <h3>Физические факторы</h3>
+          <ul>
+            <li>ШУМ, В ТОМ ЧИСЛЕ АВИАЦИОННЫЙ</li>
+            <li>ВИБРАЦИЯ</li>
+            <li>ЭМИ</li>
+          </ul>
+          <a href="pages/service-physical-factors.html" class="btn-detail">Подробнее</a>
+        </div>
+        <div class="service-bg" style="background-image: url('assets/services/5.jpg');"></div>
+      </div>
+
+      <!-- 🔬 Анализ промышленных выбросов (Широкая карточка) -->
+      <div class="service-card glass full-width">
+        <div class="card-content">
+          <div class="card-icon"></div>
+          <h3>Анализ промышленных выбросов и атмосферного воздуха</h3>
+          <ul>
+            <li>ИНВЕНТАРИЗАЦИЯ ИСТОЧНИКОВ</li>
+            <li>КОНТРОЛЬ НОРМАТИВОВ СЗЗ И ПДВ</li>
+            <li>ПРОГРАММА ПК</li>
+          </ul>
+          <a href="pages/service-industrial-emissions-analysis.html" class="btn-detail">Подробнее</a>
+        </div>
+        <!-- Для широкой карточки можно добавить общий фон лаборатории -->
+        <div class="service-bg" style="background-image: url('assets/services/3.jpg');"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <section id="steps" class="steps">
+    <div class="container">
+      <h2 class="section-title">Как <span class="neon-text">заказать анализ</span></h2>
+      <div class="steps-grid">
+        <div class="step-item glass"><span class="step-num"></span><div class="step-icon"><img src="assets/order_map/icons8-application-100.png" alt="1"></div><h3>Заявка</h3><p>Вы заполняете форму на сайте или отправляете запрос на почту.</p></div>
+        <div class="step-item glass"><span class="step-num"></span><div class="step-icon"><img src="assets/order_map/icons8-call-80.png" alt="2"></div><h3>Консультация</h3><p>Наш специалист связывается с вами для уточнения деталей и расчета стоимости.</p></div>
+        <div class="step-item glass"><span class="step-num"></span><div class="step-icon"><img src="assets/order_map/icons8-contract.png" alt="2"></div><h3>Оформление договора</h3><p>По итогам согласования стоимости работ заключается договор на оказание услуг
+.</p></div>
+        <div class="step-item glass"><span class="step-num"></span><div class="step-icon"><img src="assets/order_map/icons8-car.png" alt="3"></div><h3>Выезд специалиста</h3><p>В согласованное время наш сотрудник выезжает для отбора проб.</p></div>
+        <div class="step-item glass"><span class="step-num"></span><div class="step-icon"><img src="assets/order_map/icons8-tear-off-calendar-100.png" alt="4"></div><h3>Доставка</h3><p>Отобранные образцы доставляются в лабораторию с соблюдением условий.</p></div>
+        <div class="step-item glass"><span class="step-num"></span><div class="step-icon"><img src="assets/order_map/icons8-microscope-64.png" alt="5"></div><h3>Исследования</h3><p>Проведение квалифицированного анализа в аккредитованной лаборатории.</p></div>
+        <div class="step-item glass"><span class="step-num"></span><div class="step-icon"><img src="assets/order_map/icons8-protocol.png" alt="6"></div><h3>Протокол</h3><p>Вы получаете официальный протокол с результатами исследований.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">О <span class="neon-text">нас</span></h2>
+      <div class="about-content">
+        <div class="about-text glass">
+          <p>Мы - компания, специализирующаяся на организации лабораторных исследований для юридических лиц. Организуем проведение анализов воды, воздуха, почвы, отходов и других лабораторных исследований.</p>
+          <p>Берем на себя весь процесс: от консультации и подбора необходимых исследований до сопровождения результатов и подготовки документации.</p>
+          <p>Нашим клиентам не нужно разбираться в сложных требованиях и искать подрядчиков — мы обеспечиваем понятный сервис, контроль сроков и надежный результат.</p>
+          <p>Все необходимые лабораторные услуги и исследования в формате одного окна.</p>
+        </div>
+        <div class="about-features">
+          <div class="about-feature glass">
+            <div class="about-icon">🔬</div>
+            <h3>ИССЛЕДОВАНИЕ</h3>
+            <p>Аккредитованная лаборатория и опытные специалисты</p>
+          </div>
+          <div class="about-feature glass">
+            <div class="about-icon">📋</div>
+            <h3>ДОКУМЕНТАЦИЯ</h3>
+            <p>Полное сопровождение и подготовка протоколов</p>
+          </div>
+          <div class="about-feature glass">
+            <div class="about-icon">⚡</div>
+            <h3>РЕЗУЛЬТАТ</h3>
+            <p>Результаты от 3 дней без потери качества</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" class="clients">
+    <div class="container">
+      <h2 class="section-title">Кому это <span class="neon-text">необходимо</span></h2>
+      <div class="clients-layout">
+        <div class="clients-side left">
+          <div class="client-card glass">
+            <div class="client-icon">🏭</div>
+            <h3>Производственные предприятия</h3>
+            <p>Заводы, фабрики и промышленные объекты, осуществляющие хозяйственную деятельность</p>
+          </div>
+          <div class="client-card glass">
+            <div class="client-icon">🏗️</div>
+            <h3>Проектные организации</h3>
+            <p>Компании, осуществляющие разработку проектной документации и подготовку к строительству</p>
+          </div>
+        </div>
+        <div class="clients-center">
+          <img src="assets/zavod_2.png" alt="Производство" class="factory-img">
+        </div>
+        <div class="clients-side right">
+          <div class="client-card glass">
+            <div class="client-icon">⚙️</div>
+            <h3>Реконструкция и модернизация</h3>
+            <p>Организации, проводящие обновление, расширение и техническое перевооружение объектов</p>
+          </div>
+          <div class="client-card glass">
+            <div class="client-icon">🌊</div>
+            <h3>Экологический контроль</h3>
+            <p>Предприятия, осуществляющие сбросы, выбросы, размещение отходов и требующие регулярного контроля</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="partners" class="partners">
+  <div class="container">
+    <h2 class="section-title">Наши <span class="neon-text">партнеры</span></h2>
+    
+    <div class="partners-track-wrapper">
+      <div class="partners-track">
+        <!-- 🔄 НАБОР 1 (9 логотипов) -->
+        <img src="assets/logo_partners_photo/bashneft-vertical-logo.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/rosneft-logo-eng.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/rosla_logo.png" alt="Партнер 1" class="partner-logo">
+        <img src="assets/logo_partners_photo/2.png" alt="Партнер 2" class="partner-logo">
+        <img src="assets/logo_partners_photo/kamaz-logo.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/4.webp" alt="Партнер 4" class="partner-logo">
+        <img src="assets/logo_partners_photo/5.jpg" alt="Партнер 5" class="partner-logo">
+        <img src="assets/logo_partners_photo/6.png" alt="Партнер 6" class="partner-logo">
+        <img src="assets/logo_partners_photo/7.png" alt="Партнер 7" class="partner-logo">
+        <img src="assets/logo_partners_photo/8.jpg" alt="Партнер 8" class="partner-logo">
+        <img src="assets/logo_partners_photo/9.webp" alt="Партнер 9" class="partner-logo">
+        <img src="assets/logo_partners_photo/lukoil-logo-eng.png" alt="Партнер 10" class="partner-logo">
+        <img src="assets/logo_partners_photo/gazprom-logo-eng.png" alt="Партнер 11" class="partner-logo">
+        
+        <img src="assets/logo_partners_photo/rzd-logo.png" alt="Партнер 3" class="partner-logo">
+        
+        <!-- 🔄 НАБОР 2 (Точно такая же копия для бесшовной петли) -->
+        <img src="assets/logo_partners_photo/bashneft-vertical-logo.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/rosneft-logo-eng.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/rosla_logo.png" alt="Партнер 1" class="partner-logo">
+        <img src="assets/logo_partners_photo/2.png" alt="Партнер 2" class="partner-logo">
+        <img src="assets/logo_partners_photo/kamaz-logo.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/4.webp" alt="Партнер 4" class="partner-logo">
+        <img src="assets/logo_partners_photo/5.jpg" alt="Партнер 5" class="partner-logo">
+        <img src="assets/logo_partners_photo/6.png" alt="Партнер 6" class="partner-logo">
+        <img src="assets/logo_partners_photo/7.png" alt="Партнер 7" class="partner-logo">
+        <img src="assets/logo_partners_photo/8.jpg" alt="Партнер 8" class="partner-logo">
+        <img src="assets/logo_partners_photo/9.webp" alt="Партнер 9" class="partner-logo">
+        <img src="assets/logo_partners_photo/lukoil-logo-eng.png" alt="Партнер 3" class="partner-logo">
+        <img src="assets/logo_partners_photo/gazprom-logo-eng.png" alt="Партнер 3" class="partner-logo">
+        
+        <img src="assets/logo_partners_photo/rzd-logo.png" alt="Партнер 3" class="partner-logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="accreditation" class="accreditation">
+  <div class="container">
+    <div class="accreditation-layout">
+      
+      <!-- ЛЕВАЯ КОЛОНКА -->
+      <div class="acc-column">
+        <h3 class="acc-title">АККРЕДИТАЦИЯ</h3>
+        <div class="accreditation-slider-wrapper">
+          <button class="slider-btn prev-btn">❮</button>
+          <div class="slider-display">
+            <img src="assets/accreditation/1.jpg" alt="1" class="slider-img active">
+            <img src="assets/accreditation/2.jpg" alt="2" class="slider-img active">
+            <img src="assets/accreditation/3.jpeg" alt="3" class="slider-img active">
+            <img src="assets/accreditation/4.png" alt="4" class="slider-img active">
+            <img src="assets/accreditation/5.png" alt="5" class="slider-img active">
+            <img src="assets/accreditation/6.jpeg" alt="6" class="slider-img active">
+            <img src="assets/accreditation/7.jpeg" alt="7" class="slider-img active">
+          </div>
+          <button class="slider-btn next-btn">❯</button>
+        </div>
+      </div>
+
+      <!-- ПРАВАЯ КОЛОНКА -->
+      <div class="acc-column">
+        <h3 class="acc-title">ОБЛАСТЬ АККРЕДИТАЦИИ</h3>
+        <div class="pdf-downloads">
+          <a href="assets/pdf/oblast_akkreditacii.pdf" download class="pdf-card glass">
+            <img src="assets/pdf/pdf.png" alt="1">
+            <div class="pdf-text"><strong>Полная область аккредитации испытательной лаборатории ООО "АЛ 'Экомониторинг'"</strong><span>PDF • Скачать</span></div>
+          </a>
+          <a href="assets/pdf/РОА  с 27.11.25.pdf" download class="pdf-card glass">
+            <img src="assets/pdf/pdf.png" alt="1">
+            <div class="pdf-text"><strong>Расширение области аккредитации от 27.11.2025 — новые методы и показатели</strong><span>PDF • Скачать</span></div>
+          </a>
+          <a href="assets/pdf/РОА с 06.04.2026.pdf" download class="pdf-card glass">
+            <img src="assets/pdf/pdf.png" alt="1">
+            <div class="pdf-text"><strong>Актуальное расширение области аккредитации от 06.04.2026</strong><span>PDF • Скачать</span></div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <section id="contacts" class="callback-section">
+    <div class="callback-container">
+      <div class="callback-text">
+        <h2>Оставить заявку</h2>
+        <div class="callback-info-box"><p>Мы предоставляем широкий спектр услуг, включая исследования качества воды, почвы, воздуха, а также отходов. Наши услуги охватывают все аспекты экологии.</p></div>
+        <div class="callback-info-box"><p>Мы находим решения даже в сложных ситуациях.</p></div>
+         <div class="callback-info-box highlight-special"><p>Индивидуальные условия для партнеров.</p></div>
+      </div>
+
+        <div id="contact-form-block">
+  <div class="form-wrapper glass">
+    <!-- 🔒 action и onsubmit страховочно блокируют стандартную отправку -->
+    <form id="contact-form" action="javascript:void(0);" onsubmit="return false;">
+      <label>Название компании или ваше имя</label>
+      <input type="text" name="name" placeholder='ООО "Компания" или ФИО' required>
+
+      <label>Укажите ваш Email</label>
+      <input type="email" name="email" placeholder="@mail.ru" required>
+
+      <label>Укажите ваш номер телефона</label>
+      <input type="tel" name="phone" placeholder="+7 (___)-___-__-__" required>
+
+      
+
+      <label class="checkbox-label">
+        <input type="checkbox" name="privacy" required>
+        <span>Я согласен на обработку персональных данных</span>
+      </label>
+      <input type="hidden" name="time" id="form-time">
+      <p class="form-status" style="margin-top:15px; text-align:center; min-height:24px; color:#fff; font-size:0.9rem;"></p>
+      <button type="submit" class="btn-send">ОТПРАВИТЬ</button>
+    </form>
+  </div>
+</div>
+          
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Логотип" class="header-logo">
+          <div class="logo-text">Группа компаний<br><span>ЛАБОРАТОРНЫЕ УСЛУГИ</span></div>
+        </div>
+        <div class="footer-contacts">
+          <h3>Контакты</h3>
+          <p>г. Набережные Челны, пр. Мира, д. 76</p>
+          <a href="tel:+79370408804">+7 (937) 040-88-04</a>
+          <a href="mailto:raltera@yandex.ru">raltera@yandex.ru</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© ООО "ЛАБОРАТОРНЫЕ УСЛУГИ". Все права защищены. 2026 г.</p>
+        <p>Вся информация представлена на сайте в ознакомительных целях и не является публичной офертой. Требуется консультация специалиста.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Мобильная панель -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+79370408804" class="msb-call">📞 Позвонить</a>
+    <a href="#contacts" class="msb-form">📝 Заявка</a>
+  </div>
+
+  <!-- Скрипты -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+
+    /* === ЗАТЕМНЕНИЕ ФОНА ПРИ СКРОЛЛЕ (ИСПРАВЛЕННЫЙ) === */
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+  emailjs.init("9a18ZrZr_uNnDjZhG");
+
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const fileInput = document.getElementById('file-input');
+  const fileLabel = form.querySelector('.file-label');
+  const statusEl = form.querySelector('.form-status');
+  const submitBtn = form.querySelector('.btn-send');
+  const originalBtnText = submitBtn ? submitBtn.textContent : 'ОТПРАВИТЬ';
+
+  // Обработка выбора файла
+  if (fileInput && fileLabel) {
+    fileInput.addEventListener('change', function() {
+      if (this.files.length > 0) {
+        fileLabel.textContent = `Выбрано: ${Array.from(this.files).map(f => f.name).join(', ')}`;
+        fileLabel.style.color = '#fff';
+      } else {
+        fileLabel.textContent = 'Файл не выбран';
+        fileLabel.style.color = '#aaa';
+      }
+    });
+  }
+
+  // Отправка формы
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault(); // ⛔️ ПЕРВОЕ ДЕЙСТВИЕ: гарантированно блокирует перезагрузку
+    e.stopPropagation();
+
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = '🔄 Отправка...'; }
+    if (statusEl) { statusEl.textContent = ''; statusEl.style.color = '#fff'; }
+
+    try {
+      // Добавляем дату в скрытое поле
+      const timeInput = document.getElementById('form-time');
+      if (timeInput) timeInput.value = new Date().toLocaleString('ru-RU');
+
+      await emailjs.sendForm('service_1yzrlns', 'template_jw8l0io', this);
+
+      if (statusEl) { statusEl.textContent = '✅ Заявка успешно отправлена!'; statusEl.style.color = '#22c55e'; }
+      form.reset();
+      if (fileLabel) { fileLabel.textContent = 'Файл не выбран'; fileLabel.style.color = '#aaa'; }
+      
+    } catch (error) {
+      console.error('❌ Ошибка EmailJS:', error);
+      if (statusEl) { statusEl.textContent = '❌ Ошибка. Проверьте консоль (F12).'; statusEl.style.color = '#ff4444'; }
+    } finally {
+      setTimeout(() => {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+        if (statusEl) statusEl.textContent = '';
+      }, 5000);
+    }
+  });
+});
+
+    // Клик по активному слайду открывает увеличение
+        document.querySelectorAll('.slider-img').forEach(img => {
+          img.addEventListener('click', function() {
+            if (this.classList.contains('active')) {
+              openZoomModal(this.src);
+            }
+          });
+        });
+
+function openZoomModal(src) {
+  let modal = document.getElementById('zoomModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'zoomModal';
+    modal.className = 'zoom-modal';
+    modal.innerHTML = '<button class="zoom-close">&times;</button><img src="" alt="Документ крупно">';
+    document.body.appendChild(modal);
+    
+    modal.querySelector('.zoom-close').addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('active'); });
+  }
+  
+  modal.querySelector('img').src = src;
+  modal.classList.add('active');
+}
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    // Логика слайдера аккредитации
+    const slides = document.querySelectorAll('.slider-img');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    if (slides.length < 2 || !prevBtn || !nextBtn) return; // Если файл один, слайдер не нужен
+
+    let currentIndex = 0;
+    function updateSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      currentIndex = index;
+    }
+
+    nextBtn.addEventListener('click', () => updateSlide((currentIndex + 1) % slides.length));
+    prevBtn.addEventListener('click', () => updateSlide((currentIndex - 1 + slides.length) % slides.length));
+
+    // Управление стрелками клавиатуры
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'ArrowLeft') prevBtn.click();
+    });
+  });
+    document.addEventListener('DOMContentLoaded', () => {
+      // Квиз
+      const quizSteps = document.querySelectorAll('.quiz-step');
+      const progressFill = document.querySelector('.progress-fill');
+      const hiddenService = document.getElementById('hidden-service');
+      const hiddenUrgency = document.getElementById('hidden-urgency');
+      
+      document.querySelectorAll('.quiz-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const step = btn.closest('.quiz-step');
+          if(step.dataset.step === '1') { hiddenService.value = btn.dataset.val; nextStep(2); }
+          else if(step.dataset.step === '2') { hiddenUrgency.value = btn.dataset.val; nextStep(3); }
+        });
+      });
+      function nextStep(step) {
+        document.querySelector('.quiz-step.active').classList.remove('active');
+        document.querySelector(`.quiz-step[data-step="${step}"]`).classList.add('active');
+        progressFill.style.width = `${(step / quizSteps.length) * 100}%`;
+      }
+
+      // Частицы
+      if (document.getElementById('particles-js') && typeof particlesJS === 'function') {
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 65, density: { enable: true, value_area: 850 } },
+            color: { value: "#22c55e" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.15 } },
+            size: { value: 2.5, random: true },
+            line_linked: { enable: true, distance: 160, color: "#22c55e", opacity: 0.35, width: 1 },
+            move: { enable: true, speed: 1.5, direction: "none", out_mode: "out" }
+          },
+          interactivity: { detect_on: "canvas", events: { onhover: { enable: true, mode: "grab" } } },
+          retina_detect: true
+        });
+      }
+    });
+
+    
+  </script>
+
+  
+</body>
+</html>
